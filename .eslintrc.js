@@ -3,12 +3,28 @@ module.exports = {
   env: {
     node: true
   },
-  extends: ["plugin:vue/essential", "eslint:recommended", "@vue/prettier"],
-  parserOptions: {
-    parser: "babel-eslint"
-  },
+  globals: { '_': true },
+  extends: ['plugin:vue/strongly-recommended'],
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+    'no-tabs': 0,
+    'no-unused-vars': 0,
+    'no-return-assign': 0,
+    'vue/html-self-closing': 'off',
+    'vue/require-default-prop': 0,
+    'vue/max-attributes-per-line': [
+      // 配置成可允许一行attribute跟着标签
+      'error',
+      {
+        singleline: 3,
+        multiline: {
+          max: 1,
+          allowFirstLine: false
+        }
+      }
+    ],
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn'
+  },
+  parserOptions: {
+    parser: 'babel-eslint'
   }
-};
+}
