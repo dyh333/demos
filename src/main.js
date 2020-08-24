@@ -5,10 +5,12 @@ import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import cCore from 'c-core-vue';
 import cDesktop from 'c-vue-desktop';
+import cMap from 'c-vue-map';
 import './styles/index.scss';
 
 Vue.use(cCore);
 Vue.use(cDesktop);
+Vue.use(cMap);
 Vue.use(Antd);
 
 Vue.config.productionTip = false;

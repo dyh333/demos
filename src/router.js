@@ -10,6 +10,10 @@ const router = new Router({
       redirect: '/cia',
     },
     {
+      path: '/cmap',
+      component: () => import('./views/CMap.vue'),
+    },
+    {
       path: '/cst',
       component: () => import('./views/CStatisticTotalDemo.vue'),
     },
